@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>CIFILM - Contact</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">🎬 CIFILM</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 🌙 CONTACT SECTION -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <h2 class="contact-title">Contact Us</h2>
+      <p class="contact-text">
+        🎥 <strong>Ada film keren yang ingin kamu rekomendasikan?</strong><br>
+        Atau mungkin kamu punya masukan biar situs ini makin seru?<br><br>
+        Kami senang mendengar pendapatmu!<br>
+        Kirim pesan melalui formulir di bawah ini atau hubungi kami lewat email —
+        biar kita bisa terus menghadirkan tontonan terbaik buat kamu 🍿✨
+      </p>
+
+      <form class="contact-form" onsubmit="return sendMessage(event)">
+        <input type="text" id="name" placeholder="Nama kamu" required>
+        <input type="email" id="email" placeholder="Email kamu" required>
+        <textarea id="message" rows="5" placeholder="Tulis pesanmu di sini..." required></textarea>
+        <button type="submit">Kirim Pesan</button>
+      </form>
+
+      <p id="success-message" class="success-message" style="display:none;">
+        ✅ Pesanmu sudah terkirim! Terima kasih sudah menghubungi kami 💌
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 CIFILM. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+      document.getElementById('success-message').style.display = 'block';
+      document.querySelector('.contact-form').reset();
+      return false;
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
